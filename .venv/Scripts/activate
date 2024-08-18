@@ -35,7 +35,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Kev\Desktop\kev\programación\python-web-main55\.venv"
+VIRTUAL_ENV="C:\Users\Kev\Desktop\kev\programación\Medichat\MediChatter\.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

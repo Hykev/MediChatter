@@ -7,6 +7,5 @@ from link_bio.components.link_sponsor import link_sponsor
 
 def medichat() -> rx.Component:
     return rx.vstack(
-        
-        title("CHAT"),
+        title("CHAT AQUI"),
     )
