@@ -8,7 +8,6 @@ from link_bio.views.header import header
 from link_bio.views.courses_links import courses_links
 from link_bio.views.sponsors import sponsors
 from link_bio.styles.styles import Size
-from link_bio.state.PageState import PageState
 
 
 @rx.page(

@@ -4,18 +4,18 @@ from link_bio.routes import Route
 from link_bio.styles.styles import Size
 from link_bio.styles.colors import Color
 
-
 def navbar() -> rx.Component:
     return rx.hstack(
         rx.link(
             rx.box(
-                rx.text("moure", as_="span", color=Color.PRIMARY.value),
-                rx.text("dev", as_="span", color=Color.SECONDARY.value),
+                rx.text("Medi", as_="span", color=Color.PRIMARY.value),
+                rx.text("Chatter", as_="span", color=Color.SECONDARY.value),
                 style=styles.navbar_title_style
             ),
             href=Route.INDEX.value
         ),
         position="sticky",
+        background="center/cover url('/bann.gif')",
         bg=Color.CONTENT.value,
         padding_x=Size.BIG.value,
         padding_y=Size.DEFAULT.value,

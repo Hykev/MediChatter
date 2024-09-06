@@ -1,12 +1,13 @@
 import reflex as rx
 import link_bio.utils as utils
 import link_bio.styles.styles as styles
+from link_bio.views.chat.chatapp import medichat
+from link_bio.views.chat.chatapp import qa, action_bar, chat
 from link_bio.components.navbar import navbar
 from link_bio.components.footer import footer
 from link_bio.views.header import header
 from link_bio.views.index_links import index_links
 from link_bio.views.sponsors import sponsors
-from link_bio.views.chat.medichat import medichat
 from link_bio.styles.styles import Size
 
 
@@ -21,16 +22,15 @@ def index() -> rx.Component:
         utils.lang(),
         navbar(),
         rx.center(
-            rx.vstack(
+             rx.vstack(
                 header(),
                 medichat(),
                 index_links(),
-                sponsors(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
                 margin_y=Size.BIG.value,
                 padding=Size.BIG.value
             )
         ),
-        footer()
+        footer(),
     )

@@ -2,7 +2,7 @@
 G_TAG = "G-3YGHT3XJFS"
 
 # Cabecera
-GITHUB_URL = "https://github.com/mouredev"
+GITHUB_URL = "https://github.com/Hykev/MediChatter"
 TWITTER_X_URL = "https://twitter.com/mouredev"
 INSTAGRAM_URL = "https://instagram.com/mouredev"
 TIKTOK_URL = "https://tiktok.com/@mouredev"
@@ -14,9 +14,6 @@ TWITCH_URL = "https://twitch.tv/mouredev"
 YOUTUBE_URL = "https://youtube.com/@mouredev"
 YOUTUBE_SECONDARY_URL = "https://youtube.com/@mouredevtv"
 DISCORD_URL = "https://discord.gg/mouredev"
-
-# Newsletter
-NEWSLETTER_URL = "https://newsletter.moure.dev"
 
 # Recursos y más
 BOOK_URL = "https://mouredev.com/libro-git"

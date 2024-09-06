@@ -10,6 +10,7 @@ def sponsors() -> rx.Component:
         title("Colaboran"),
         rx.flex(
             link_sponsor(
+                
                 "/elgato.png",
                 const.ELGATO_URL,
                 "Logotipo de Elgato"
