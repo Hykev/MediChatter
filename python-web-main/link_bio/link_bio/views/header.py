@@ -18,28 +18,30 @@ def header(details=True) -> rx.Component:
                     radius="full",
                     color=TextColor.BODY.value,
                     bg=Color.CONTENT.value,
-                    padding="-4px",
+                    padding="-px",
                     border=f"4px solid {Color.PRIMARY.value}"
                 ),
                 position="relative"
             ),
             rx.vstack(
-                rx.heading(
-                    "Medi Chatter",
-                    size=Spacing.BIG.value
-                ),
-                rx.text(
-                    "Asistente médico virtual",
-                    margin_top=Size.ZERO.value,
-                    color=Color.PRIMARY.value
-                ),
-                rx.hstack(
+                rx.hstack (
+
+                    rx.heading(
+                        "Medi Chatter",
+                        size=Spacing.BIG.value
+                    ),
                     link_icon(
                         "/icons/github.svg",
                         const.GITHUB_URL,
                         "GitHub"
                     ),
                 ),
+                    rx.text(
+                        "Asistente médico virtual",
+                        margin_top=Size.ZERO.value,
+                        color=Color.PRIMARY.value
+                    ),
+                
                 spacing=Spacing.ZERO.value,
                 align_items="start"
             ),
@@ -52,17 +54,17 @@ def header(details=True) -> rx.Component:
                 rx.flex(
                     rx.spacer(),
                     info_text(
-                        "*", "Puede dar datos erróneos"
+                        "*", "El chatbot puede llegar a dar datos erróneos."
                     ),
                     rx.spacer(),
                     info_text(
-                        "*", "Asista al medico en caso de emergencia"
+                        "*", "No se automedique; obtenga un diagnóstico adecuado."
                     ),
                     width="100%"
                 ),
                 rx.text(
                     f"""
-                    Soy Medichatter, tu asistente de salud virtual. Aquí para ayudarte con tus dudas sobre medicamentos.
+                    Soy Medichatter, tu asistente de salud virtual. Aquí para ayudarte con tus dudas sobre medicina.
                     Recuerda que aunque puedo proporcionarte información útil, siempre es recomendable consultar a tu
                     médico para un diagnóstico y tratamiento adecuados.
                     """,

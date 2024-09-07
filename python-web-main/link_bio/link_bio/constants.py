@@ -21,7 +21,7 @@ BOOKS_URL = "https://amazon.es/shop/mouredev/list/2ZIHJJFJ9AVZ3"
 SETUP_URL = "https://mouredev.com/setup"
 MOUREDEV_URL = "https://mouredev.com"
 COFFEE_URL = "https://buymeacoffee.com/mouredev"
-REPO_URL = "https://github.com/mouredev/python-web"
+REPO_URL = "https://ugb.edu.sv"
 
 # Contacto
 MYPUBLICINBOX_URL = "https://mypublicinbox.com/mouredev"

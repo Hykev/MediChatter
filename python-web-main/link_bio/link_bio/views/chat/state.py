@@ -13,16 +13,28 @@ class TutorialState(rx.State):
     # Keep track of the chat history as a list of (question, answer) tuples.
     chat_history: list[tuple[str, str]]
 
+   
     async def answer(self):
-        # Our chatbot has some brains now!
+    # Our chatbot has some brains now!
         client = AsyncOpenAI(api_key=os.environ["OPENAI_API_KEY"])
+        
+        # Agregar contexto al mensaje
+        context = "Eres un asistente médico. Responde solo preguntas relacionadas con la salud y medicina. Si la pregunta no está relacionada con estos temas, pide amablemente que se haga una pregunta médica."
+        
+        messages = [
+            {"role": "system", "content": context},
+            {"role": "user", "content": self.question}
+        ]
+        
         session = await client.chat.completions.create(
             model="gpt-3.5-turbo",
-            messages=[{"role": "user", "content": self.question}],
+            messages=messages,
             stop=None,
             temperature=0.7,
             stream=True,
         )
+
+        
 
         # Add to the answer as the chatbot responds.
         answer = ""

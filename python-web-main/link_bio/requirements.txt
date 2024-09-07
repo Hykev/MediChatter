@@ -1,5 +1,11 @@
-pip==24.1.2
-reflex==0.4.5
-python-dotenv==1.0.1
-supabase==2.3.5
+configcat-client==9.0.2
+dill==0.3.8
+h2==4.1.0
+lazy_loader==0.4
 openai==1.42.0
+python-dotenv==1.0.1
+pytz==2024.1
+reflex==0.4.5
+supabase==2.3.5
+tomlkit==0.13.2
+twine==5.1.1

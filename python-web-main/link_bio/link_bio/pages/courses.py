@@ -6,7 +6,6 @@ from link_bio.components.navbar import navbar
 from link_bio.components.footer import footer
 from link_bio.views.header import header
 from link_bio.views.courses_links import courses_links
-from link_bio.views.sponsors import sponsors
 from link_bio.styles.styles import Size
 
 
@@ -25,7 +24,6 @@ def courses() -> rx.Component:
             rx.vstack(
                 header(False),
                 courses_links(),
-                sponsors(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
                 margin_y=Size.BIG.value,

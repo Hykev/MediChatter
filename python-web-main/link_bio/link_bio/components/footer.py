@@ -10,34 +10,23 @@ def footer() -> rx.Component:
         rx.image(
             src="/logo.png",
             height=Size.VERY_BIG.value,
-            width=Size.VERY_BIG.value,
-            alt="Logotipo de MoureDev. Una \"eme\" entre llaves."
+            alt="Logotipo de la UGB"
         ),
         rx.link(
             rx.box(
-                f"© 2014-{datetime.date.today().year} ",
+                f"© 2024 ",
                 rx.text(
-                    "MoureDev by Brais Moure",
+                    "Diego Palacios, Roberto García, Alexander Zapata",
                     as_="span",
                     color=Color.PRIMARY.value
                 ),
-                " v4.",
                 padding_top=Size.DEFAULT.value
             ),
-            href=const.MOUREDEV_URL,
-            is_external=True,
-            font_size=Size.MEDIUM.value
         ),
         rx.link(
             rx.hstack(
-                rx.image(
-                    src="/icons/github.svg",
-                    height=Size.LARGE.value,
-                    width=Size.LARGE.value,
-                    alt="Logo GitHub"
-                ),
                 rx.text(
-                    "BUILDING SOFTWARE WITH ♥ FROM GALICIA TO THE WORLD.",
+                    "Proyecto para la Universidad Gerardo Barrios",
                     font_size=Size.MEDIUM.value,
                     margin_top=Size.ZERO.value
                 ),

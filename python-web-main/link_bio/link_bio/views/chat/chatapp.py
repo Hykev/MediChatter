@@ -28,13 +28,13 @@ def chat() -> rx.Component:
 def action_bar() -> rx.Component:
     return rx.vstack(
         rx.input(
-            placeholder="Ask a question",
+            placeholder="Ingresa tu síntoma o consulta",
             value=TutorialState.question,
             on_change=TutorialState.set_question,
             style=style.input_style,
         ),
         rx.button(
-            "Ask",
+            "Enviar",
             on_click=TutorialState.answer,
         ),
     )

@@ -7,7 +7,6 @@ from link_bio.components.navbar import navbar
 from link_bio.components.footer import footer
 from link_bio.views.header import header
 from link_bio.views.index_links import index_links
-from link_bio.views.sponsors import sponsors
 from link_bio.styles.styles import Size
 
 
