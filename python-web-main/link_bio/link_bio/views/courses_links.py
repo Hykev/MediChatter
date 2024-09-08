@@ -17,11 +17,6 @@ def courses_links() -> rx.Component:
                 Color.SECONDARY.value
             ),
 
-
-
-
-
-
             rx.link(
                 rx.hstack(
                     rx.text(
@@ -44,12 +39,6 @@ def courses_links() -> rx.Component:
                 width="100%",
                 height=200,
             ),
-
-
-
-
-
-
 
             rx.link(
                 rx.hstack(
@@ -74,12 +63,6 @@ def courses_links() -> rx.Component:
                 height=200,
             ),
 
-
-
-
-
-
-
             rx.link(
                 rx.hstack(
                     rx.text(
@@ -102,10 +85,6 @@ def courses_links() -> rx.Component:
                 width="100%",
                 height=200,
             ),
-
-
-
-
 
             rx.link(
                 rx.hstack(

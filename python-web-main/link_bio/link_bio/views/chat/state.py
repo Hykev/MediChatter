@@ -6,25 +6,24 @@ from openai import AsyncOpenAI
 import reflex as rx
 
 class TutorialState(rx.State):
+    question: str = ""
 
-    # The current question being asked.
-    question: str
+    chat_history: list[tuple[str, str]] = []
 
-    # Keep track of the chat history as a list of (question, answer) tuples.
-    chat_history: list[tuple[str, str]]
-
-   
     async def answer(self):
-    # Our chatbot has some brains now!
         client = AsyncOpenAI(api_key=os.environ["OPENAI_API_KEY"])
         
-        # Agregar contexto al mensaje
-        context = "Eres un asistente médico. Responde solo preguntas relacionadas con la salud y medicina. Si la pregunta no está relacionada con estos temas, pide amablemente que se haga una pregunta médica."
+        context = "Eres un asistente médico. Responde solo preguntas relacionadas con la salud y medicina o datos que has respondido o historial del chat. Si la pregunta no está relacionada con estos temas, pide amablemente que se haga una pregunta médica. Además, si solamente menciona sintomas da recomendaciones de medicamentos comunes o remedios que pueda hacer ademas de recomendarle asistir al medico si es grave."
         
         messages = [
             {"role": "system", "content": context},
-            {"role": "user", "content": self.question}
         ]
+        
+        for q, a in self.chat_history:
+            messages.append({"role": "user", "content": q})
+            messages.append({"role": "assistant", "content": a})
+        
+        messages.append({"role": "user", "content": self.question})
         
         session = await client.chat.completions.create(
             model="gpt-3.5-turbo",
@@ -34,21 +33,15 @@ class TutorialState(rx.State):
             stream=True,
         )
 
-        
-
-        # Add to the answer as the chatbot responds.
         answer = ""
         self.chat_history.append((self.question, answer))
 
-        # Clear the question input.
         self.question = ""
-        # Yield here to clear the frontend input before continuing.
         yield
 
         async for item in session:
             if hasattr(item.choices[0].delta, "content"):
                 if item.choices[0].delta.content is None:
-                    # presence of 'None' indicates the end of the response
                     break
                 answer += item.choices[0].delta.content
                 self.chat_history[-1] = (self.chat_history[-1][0], answer)

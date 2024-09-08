@@ -11,7 +11,7 @@ def index_links() -> rx.Component:
     return rx.vstack(
         title("Estadísticas"),
         link_button(
-            "Vea datos en gráficas",
+            "Vea datos interesantes en gráficas",
             "Análisis de datos en base a las peticiones que se realizan a Medichatter y datos globales",
             "/icons/sql.svg",
             Route.COURSES.value,

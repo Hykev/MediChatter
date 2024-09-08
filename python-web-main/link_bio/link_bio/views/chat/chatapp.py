@@ -47,4 +47,3 @@ def medichat() -> rx.Component:
             align="center", 
         )
     )
-
